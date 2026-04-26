@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trastorno Cognitivo Mayor | Psicóloga Ruth Concha</title>
+    <meta
+      name="description"
+      content="Atención en trastorno cognitivo mayor enfocada en estimulación cognitiva, apoyo familiar y calidad de vida."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a href="index.html" class="brand" aria-label="Inicio Psicóloga Ruth Concha">
+          <svg
+            class="logo"
+            width="56"
+            height="56"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle cx="100" cy="100" r="95" stroke="url(#gradient-cog)" stroke-width="2" />
+            <path
+              d="M70 140C70 140 40 120 40 80C40 40 70 30 100 30"
+              stroke="#A18CD1"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <path d="M100 160V80" stroke="#D4AF37" stroke-width="4" />
+            <path
+              d="M85 55C85 45 115 45 115 55C115 65 85 65 85 55Z"
+              stroke="#D4AF37"
+              stroke-width="2"
+            />
+            <path
+              d="M115 55C115 45 145 45 145 55C145 65 115 65 115 55Z"
+              stroke="#D4AF37"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient id="gradient-cog" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A18CD1" />
+                <stop offset="1" stop-color="#D4AF37" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="brand-text">Psicóloga Ruth Concha</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+          Menú
+        </button>
+
+        <ul id="menu" class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="neurodivergencia.html">Neurodivergencia</a></li>
+          <li><a href="trastorno-cognitivo.html" aria-current="page">Trastorno Cognitivo</a></li>
+          <li><a class="nav-cta" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero hero-banner hero-cognitive reveal">
+        <div class="container hero-shell">
+          <article class="hero-card">
+            <p class="eyebrow">Trastorno Cognitivo Mayor</p>
+            <h1>Estimulación cognitiva y apoyo familiar</h1>
+            <p class="lead">
+              Intervención centrada en preservar capacidades, sostener vínculos y mejorar la calidad de vida en la
+              etapa adulta.
+            </p>
+            <a class="btn btn-primary" href="#contacto">Solicitar orientación</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container reveal">
+        <h2 class="section-title">Áreas de acompañamiento</h2>
+        <div class="cards-grid">
+          <article class="focus-card focus-card--lavender">
+            <h3>Estimulación cognitiva</h3>
+            <p>
+              Ejercicios de memoria, orientación, lenguaje y atención adaptados al estado funcional de cada
+              persona.
+            </p>
+          </article>
+          <article class="focus-card">
+            <h3>Apoyo a familias</h3>
+            <p>
+              Orientación para cuidadores en rutinas, comunicación empática y prevención de sobrecarga familiar.
+            </p>
+          </article>
+          <article class="focus-card focus-card--green">
+            <h3>Calidad de vida</h3>
+            <p>
+              Objetivos terapéuticos realistas para mantener bienestar emocional, autonomía y participación diaria.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="section container contact reveal">
+        <h2 class="section-title">Contacto</h2>
+        <p>Conversemos sobre las necesidades actuales y definamos un plan de trabajo.</p>
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp btn-large" href="https://wa.me/56900000000">WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Psicóloga Ruth Concha. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

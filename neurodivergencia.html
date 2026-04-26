@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neurodivergencia | Psicóloga Ruth Concha</title>
+    <meta
+      name="description"
+      content="Acompañamiento psicológico para niños y jóvenes con neurodivergencias y orientación a familias."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegación principal">
+        <a href="index.html" class="brand" aria-label="Inicio Psicóloga Ruth Concha">
+          <svg
+            class="logo"
+            width="56"
+            height="56"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <circle cx="100" cy="100" r="95" stroke="url(#gradient-neuro)" stroke-width="2" />
+            <path
+              d="M70 140C70 140 40 120 40 80C40 40 70 30 100 30"
+              stroke="#A18CD1"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <path d="M100 160V80" stroke="#D4AF37" stroke-width="4" />
+            <path
+              d="M85 55C85 45 115 45 115 55C115 65 85 65 85 55Z"
+              stroke="#D4AF37"
+              stroke-width="2"
+            />
+            <path
+              d="M115 55C115 45 145 45 145 55C145 65 115 65 115 55Z"
+              stroke="#D4AF37"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient
+                id="gradient-neuro"
+                x1="0"
+                y1="0"
+                x2="200"
+                y2="200"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#A18CD1" />
+                <stop offset="1" stop-color="#D4AF37" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="brand-text">Psicóloga Ruth Concha</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+          Menú
+        </button>
+
+        <ul id="menu" class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="neurodivergencia.html" aria-current="page">Neurodivergencia</a></li>
+          <li><a href="trastorno-cognitivo.html">Trastorno Cognitivo</a></li>
+          <li><a class="nav-cta" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero hero-banner hero-neuro reveal">
+        <div class="container hero-shell">
+          <article class="hero-card">
+            <p class="eyebrow">Neurodivergencia</p>
+            <h1>Acompañamiento para jóvenes y familias</h1>
+            <p class="lead">
+              Intervenciones claras y respetuosas para fortalecer bienestar emocional, autonomía y aprendizaje en
+              niños y adolescentes.
+            </p>
+            <a class="btn btn-primary" href="#contacto">Solicitar orientación</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container reveal">
+        <h2 class="section-title">Líneas de trabajo</h2>
+        <div class="cards-grid">
+          <article class="focus-card focus-card--green">
+            <h3>Acompañamiento terapéutico</h3>
+            <p>
+              Espacios de escucha y regulación emocional con rutinas de apoyo que se adaptan al ritmo de cada
+              joven.
+            </p>
+          </article>
+          <article class="focus-card focus-card--lavender">
+            <h3>Terapias para jóvenes</h3>
+            <p>
+              Herramientas prácticas para habilidades sociales, manejo de ansiedad, organización diaria y
+              autoestima.
+            </p>
+          </article>
+          <article class="focus-card">
+            <h3>Herramientas para padres</h3>
+            <p>
+              Guías concretas para fortalecer comunicación en casa, anticipar cambios y acompañar procesos
+              escolares.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="section container contact reveal">
+        <h2 class="section-title">Contacto</h2>
+        <p>Coordina una primera sesión y diseñemos juntos un plan de acompañamiento.</p>
+        <div class="contact-actions">
+          <a class="btn btn-whatsapp btn-large" href="https://wa.me/56900000000">WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Psicóloga Ruth Concha. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
