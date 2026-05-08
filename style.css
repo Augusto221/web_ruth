@@ -291,6 +291,55 @@ h1 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  width: 500px;
+  height: 110px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.13));
+}
+
+.card-icon--mid-left {
+  top: 20%;
+  right: auto;
+  left: 215px;
+  transform: translateY(-50%);
+}
+
+.card-icon--bottom-center-right {
+  top: 60%;
+  right: auto;
+  bottom: -22px;
+  left: 58%;
+  transform: translateX(-50%);
+}
+
+.section-deco {
+  position: absolute;
+  top: 1rem;
+  right: 47rem;
+  width: 120px;
+  height: auto;
+  pointer-events: none;
+}
+
+.contact-deco {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  width: 88px;
+  height: 100px;
+  object-fit: contain;
+  opacity: 0.99;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
 }
 
 .hero-card {
