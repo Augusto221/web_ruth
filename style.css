@@ -296,10 +296,10 @@ h1 {
 
 .card-icon {
   position: absolute;
-  top: -22px;
-  right: -18px;
-  width: 500px;
-  height: 110px;
+  top: 1rem;
+  right: 1rem;
+  width: clamp(76px, 9vw, 112px);
+  height: clamp(76px, 9vw, 112px);
   object-fit: contain;
   pointer-events: none;
   user-select: none;
@@ -307,25 +307,26 @@ h1 {
 }
 
 .card-icon--mid-left {
-  top: 30%;
+  top: 50%;
   right: auto;
-  left: 215px;
+  left: auto;
+  right: 1.1rem;
   transform: translateY(-50%);
 }
 
 .card-icon--bottom-center-right {
   top: auto;
-  right: auto;
-  bottom: -8px;
-  left: 58%;
-  transform: translateX(-50%);
+  right: 1rem;
+  bottom: 1rem;
+  left: auto;
+  transform: none;
 }
 
 .section-deco {
   position: absolute;
-  top: 0.7rem;
-  right: 35rem;
-  width: 120px;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: clamp(76px, 10vw, 120px);
   height: auto;
   pointer-events: none;
 }
@@ -360,6 +361,7 @@ h1 {
 
 .intro-card {
   padding: clamp(1.5rem, 3vw, 2.3rem);
+  padding-right: clamp(6.8rem, 13vw, 9rem);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(228, 242, 238, 0.86));
 }
 
@@ -393,6 +395,8 @@ h1 {
 
 .focus-card {
   padding: clamp(1.2rem, 2vw, 1.8rem);
+  padding-right: clamp(6.4rem, 12vw, 8.5rem);
+  min-height: 230px;
 }
 
 .focus-card h3 {
@@ -470,7 +474,12 @@ h1 {
 .about,
 .contact {
   padding: clamp(1.4rem, 3vw, 2.2rem);
+  padding-right: clamp(1.4rem, 3vw, 2.2rem);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(228, 242, 238, 0.72));
+}
+
+.about {
+  padding-right: clamp(7rem, 13vw, 10rem);
 }
 
 .contact p {
@@ -682,19 +691,31 @@ h1 {
   }
 
   .card-icon {
-    width: 82px;
-    height: 92px;
+    position: static;
+    width: 96px;
+    height: 96px;
+    margin: 0 0 0.75rem auto;
+    transform: none;
   }
 
   .card-icon--mid-left {
-    left: 35%;
-    top: 15%;
+    transform: none;
   }
 
   .section-deco {
-    width: 90px;
-    top: 0.5rem;
-    right: 23rem;
+    position: static;
+    width: 96px;
+    margin: 0 0 0.75rem auto;
+  }
+
+  .intro-card,
+  .focus-card,
+  .about {
+    padding-right: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .focus-card {
+    min-height: auto;
   }
 
   .contact-deco {
@@ -739,26 +760,21 @@ h1 {
   }
 
   .card-icon {
-    width: 70px;
-    height: 200px;
-  }
-
-  .card-icon--mid-left {
-    left: 55%;
-    top: 13%;
-  }
-
-  .card-icon--bottom-center-right {
-    left: 60%;
-    top: 73%;
-    width: 104px;
+    width: 84px;
     height: 84px;
   }
 
+  .card-icon--mid-left {
+    transform: none;
+  }
+
+  .card-icon--bottom-center-right {
+    width: 88px;
+    height: 88px;
+  }
+
   .section-deco {
-    width: 68px;
-    top: 1.9rem;
-    right: 5rem;
+    width: 84px;
   }
 
   .contact-deco {
