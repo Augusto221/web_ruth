@@ -307,24 +307,24 @@ h1 {
 }
 
 .card-icon--mid-left {
-  top: 20%;
+  top: 30%;
   right: auto;
   left: 215px;
   transform: translateY(-50%);
 }
 
 .card-icon--bottom-center-right {
-  top: 60%;
+  top: auto;
   right: auto;
-  bottom: -22px;
+  bottom: -8px;
   left: 58%;
   transform: translateX(-50%);
 }
 
 .section-deco {
   position: absolute;
-  top: 1rem;
-  right: 47rem;
+  top: 0.7rem;
+  right: 35rem;
   width: 120px;
   height: auto;
   pointer-events: none;
@@ -680,6 +680,27 @@ h1 {
   .nav-links a {
     width: 100%;
   }
+
+  .card-icon {
+    width: 82px;
+    height: 92px;
+  }
+
+  .card-icon--mid-left {
+    left: 35%;
+    top: 15%;
+  }
+
+  .section-deco {
+    width: 90px;
+    top: 0.5rem;
+    right: 23rem;
+  }
+
+  .contact-deco {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 @media (min-width: 921px) {
@@ -715,6 +736,34 @@ h1 {
     height: 56px;
     bottom: 1.25rem;
     right: 1.25rem;
+  }
+
+  .card-icon {
+    width: 70px;
+    height: 200px;
+  }
+
+  .card-icon--mid-left {
+    left: 55%;
+    top: 13%;
+  }
+
+  .card-icon--bottom-center-right {
+    left: 60%;
+    top: 73%;
+    width: 104px;
+    height: 84px;
+  }
+
+  .section-deco {
+    width: 68px;
+    top: 1.9rem;
+    right: 5rem;
+  }
+
+  .contact-deco {
+    width: 52px;
+    height: 52px;
   }
 }
 
