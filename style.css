@@ -294,43 +294,6 @@ h1 {
   position: relative;
 }
 
-.card-icon {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: clamp(76px, 9vw, 112px);
-  height: clamp(76px, 9vw, 112px);
-  object-fit: contain;
-  pointer-events: none;
-  user-select: none;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.13));
-}
-
-.card-icon--mid-left {
-  top: 50%;
-  right: auto;
-  left: auto;
-  right: 1.1rem;
-  transform: translateY(-50%);
-}
-
-.card-icon--bottom-center-right {
-  top: auto;
-  right: 1rem;
-  bottom: 1rem;
-  left: auto;
-  transform: none;
-}
-
-.section-deco {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: clamp(76px, 10vw, 120px);
-  height: auto;
-  pointer-events: none;
-}
-
 .contact-deco {
   position: absolute;
   bottom: 1rem;
@@ -361,8 +324,19 @@ h1 {
 
 .intro-card {
   padding: clamp(1.5rem, 3vw, 2.3rem);
-  padding-right: clamp(6.8rem, 13vw, 9rem);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(228, 242, 238, 0.86));
+}
+
+.intro-card::before,
+.focus-card::before,
+.support-card::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--mint);
+  margin-bottom: 1rem;
 }
 
 .intro-card h2 {
@@ -395,8 +369,6 @@ h1 {
 
 .focus-card {
   padding: clamp(1.2rem, 2vw, 1.8rem);
-  padding-right: clamp(6.4rem, 12vw, 8.5rem);
-  min-height: 230px;
 }
 
 .focus-card h3 {
@@ -413,6 +385,52 @@ h1 {
 .focus-card--lavender {
   border-color: rgba(155, 142, 196, 0.28);
   background: linear-gradient(145deg, rgba(223, 215, 244, 0.28), rgba(255, 255, 255, 0.9));
+}
+
+.focus-card--lavender::before,
+.support-card--lavender::before {
+  background: var(--lavender);
+}
+
+.support-card--sand::before {
+  background: var(--sand);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.support-card h3 {
+  color: var(--title);
+  font-size: 1.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.support-card p {
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.support-card--mint {
+  background: linear-gradient(145deg, rgba(194, 232, 223, 0.4), rgba(255, 255, 255, 0.94));
+}
+
+.support-card--lavender {
+  background: linear-gradient(145deg, rgba(223, 215, 244, 0.34), rgba(255, 255, 255, 0.94));
+}
+
+.support-card--sand {
+  background: linear-gradient(145deg, rgba(224, 200, 154, 0.26), rgba(255, 255, 255, 0.94));
 }
 
 .image-section {
@@ -471,15 +489,38 @@ h1 {
   color: var(--lavender);
 }
 
-.about,
+.about-panel,
 .contact {
   padding: clamp(1.4rem, 3vw, 2.2rem);
   padding-right: clamp(1.4rem, 3vw, 2.2rem);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(228, 242, 238, 0.72));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-.about {
-  padding-right: clamp(7rem, 13vw, 10rem);
+.about-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+}
+
+.about-copy p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.about-media {
+  display: flex;
+  justify-content: center;
+}
+
+.about-media img {
+  width: min(160px, 100%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(30, 70, 80, 0.12));
 }
 
 .contact p {
@@ -649,6 +690,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
   .cards-grid .focus-card:only-child,
   .cards-grid > :nth-child(3) {
     grid-column: auto;
@@ -690,32 +735,17 @@ h1 {
     width: 100%;
   }
 
-  .card-icon {
-    position: static;
-    width: 96px;
-    height: 96px;
-    margin: 0 0 0.75rem auto;
-    transform: none;
-  }
-
-  .card-icon--mid-left {
-    transform: none;
-  }
-
-  .section-deco {
-    position: static;
-    width: 96px;
-    margin: 0 0 0.75rem auto;
-  }
-
   .intro-card,
-  .focus-card,
-  .about {
+  .focus-card {
     padding-right: clamp(1.2rem, 4vw, 1.8rem);
   }
 
-  .focus-card {
-    min-height: auto;
+  .about-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .about-media {
+    justify-content: flex-start;
   }
 
   .contact-deco {
@@ -757,24 +787,6 @@ h1 {
     height: 56px;
     bottom: 1.25rem;
     right: 1.25rem;
-  }
-
-  .card-icon {
-    width: 84px;
-    height: 84px;
-  }
-
-  .card-icon--mid-left {
-    transform: none;
-  }
-
-  .card-icon--bottom-center-right {
-    width: 88px;
-    height: 88px;
-  }
-
-  .section-deco {
-    width: 84px;
   }
 
   .contact-deco {
