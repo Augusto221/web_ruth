@@ -151,9 +151,23 @@ svg {
   color: var(--mint);
 }
 
+.theme-cognitive .nav-links a[aria-current="page"] {
+  color: var(--lavender);
+}
+
 .nav-links a:hover,
 .nav-links a:focus-visible {
   background: rgba(107, 189, 170, 0.16);
+}
+
+.nav-links a[href="trastorno-cognitivo.html"]:hover,
+.nav-links a[href="trastorno-cognitivo.html"]:focus-visible {
+  background: rgba(155, 142, 196, 0.18);
+}
+
+.theme-cognitive .nav-links a:hover,
+.theme-cognitive .nav-links a:focus-visible {
+  background: rgba(155, 142, 196, 0.18);
 }
 
 .nav-links .nav-cta {
@@ -162,9 +176,18 @@ svg {
   font-weight: 700;
 }
 
+.theme-cognitive .nav-links .nav-cta {
+  background: var(--lavender);
+}
+
 .nav-links .nav-cta:hover,
 .nav-links .nav-cta:focus-visible {
   background: var(--mint-dark);
+}
+
+.theme-cognitive .nav-links .nav-cta:hover,
+.theme-cognitive .nav-links .nav-cta:focus-visible {
+  background: var(--lavender-dark);
 }
 
 .section {
@@ -278,7 +301,7 @@ h1 {
 
 .lead {
   color: rgba(255, 255, 255, 0.92);
-  max-width: 64ch;
+  max-width: 90ch;
   font-size: clamp(1.05rem, 2.4vw, 1.18rem);
 }
 
@@ -416,6 +439,14 @@ h1 {
   margin-bottom: 0.45rem;
 }
 
+.support-card h4 {
+  color: var(--title);
+  font-family: "Playfair Display", serif;
+  font-size: 1.22rem;
+  line-height: 1.2;
+  margin: 0 0 0.45rem;
+}
+
 .support-card p {
   color: var(--text-soft);
   margin: 0;
@@ -431,6 +462,47 @@ h1 {
 
 .support-card--sand {
   background: linear-gradient(145deg, rgba(224, 200, 154, 0.26), rgba(255, 255, 255, 0.94));
+}
+
+.service-stack {
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2rem);
+}
+
+.service-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.service-panel--mint {
+  background: linear-gradient(145deg, rgba(194, 232, 223, 0.32), rgba(255, 255, 255, 0.94));
+}
+
+.service-panel--lavender {
+  background: linear-gradient(145deg, rgba(223, 215, 244, 0.3), rgba(255, 255, 255, 0.94));
+}
+
+.service-header {
+  max-width: 850px;
+  margin-bottom: clamp(1rem, 2.4vw, 1.4rem);
+}
+
+.service-header h3 {
+  color: var(--title);
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  margin-bottom: 0.55rem;
+}
+
+.service-header p:last-child {
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.service-header--wide {
+  max-width: 940px;
 }
 
 .image-section {
@@ -533,6 +605,13 @@ h1 {
   gap: 0.8rem;
 }
 
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+
 .btn {
   border-radius: 14px;
   border: 2px solid transparent;
@@ -586,6 +665,30 @@ h1 {
 .btn-lavender:hover,
 .btn-lavender:focus-visible {
   background: var(--lavender-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-mint {
+  background: transparent;
+  color: var(--mint-dark);
+  border-color: var(--mint);
+}
+
+.btn-outline-mint:hover,
+.btn-outline-mint:focus-visible {
+  background: rgba(107, 189, 170, 0.12);
+  transform: translateY(-2px);
+}
+
+.btn-outline-lavender {
+  background: transparent;
+  color: var(--lavender-dark);
+  border-color: var(--lavender);
+}
+
+.btn-outline-lavender:hover,
+.btn-outline-lavender:focus-visible {
+  background: rgba(155, 142, 196, 0.12);
   transform: translateY(-2px);
 }
 
