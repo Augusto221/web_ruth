@@ -11,6 +11,9 @@
   --mint: #6bbdaa;
   --mint-dark: #4ea090;
   --mint-soft: #c2e8df;
+  --blue: #5b8fca;
+  --blue-dark: #416f9f;
+  --blue-soft: #d8eafa;
   --lavender: #9b8ec4;
   --lavender-dark: #8070b0;
   --lavender-soft: #dfd7f4;
@@ -155,9 +158,18 @@ svg {
   color: var(--lavender);
 }
 
+.theme-neuro .nav-links a[aria-current="page"] {
+  color: var(--blue);
+}
+
 .nav-links a:hover,
 .nav-links a:focus-visible {
   background: rgba(107, 189, 170, 0.16);
+}
+
+.nav-links a[href="neurodivergencia.html"]:hover,
+.nav-links a[href="neurodivergencia.html"]:focus-visible {
+  background: rgba(91, 143, 202, 0.18);
 }
 
 .nav-links a[href="trastorno-cognitivo.html"]:hover,
@@ -165,15 +177,14 @@ svg {
   background: rgba(155, 142, 196, 0.18);
 }
 
-.theme-cognitive .nav-links a:hover,
-.theme-cognitive .nav-links a:focus-visible {
-  background: rgba(155, 142, 196, 0.18);
-}
-
 .nav-links .nav-cta {
   background: var(--mint);
   color: #fff;
   font-weight: 700;
+}
+
+.theme-neuro .nav-links .nav-cta {
+  background: var(--blue);
 }
 
 .theme-cognitive .nav-links .nav-cta {
@@ -190,12 +201,21 @@ svg {
   background: var(--lavender-dark);
 }
 
+.theme-neuro .nav-links .nav-cta:hover,
+.theme-neuro .nav-links .nav-cta:focus-visible {
+  background: var(--blue-dark);
+}
+
 .section {
   padding-block: clamp(2.8rem, 6vw, 5.4rem);
 }
 
 .section--mint-tint {
   background: linear-gradient(160deg, rgba(193, 232, 223, 0.38) 0%, rgba(250, 246, 240, 0.7) 100%);
+}
+
+.section--blue-tint {
+  background: linear-gradient(160deg, rgba(216, 234, 250, 0.58) 0%, rgba(250, 246, 240, 0.74) 100%);
 }
 
 .section--lavender-tint {
@@ -263,6 +283,15 @@ svg {
 
 .eyebrow-dark {
   color: var(--mint);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+}
+
+.eyebrow-blue {
+  color: var(--blue);
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -405,9 +434,19 @@ h1 {
   background: linear-gradient(145deg, rgba(194, 232, 223, 0.32), rgba(255, 255, 255, 0.9));
 }
 
+.focus-card--blue {
+  border-color: rgba(91, 143, 202, 0.28);
+  background: linear-gradient(145deg, rgba(216, 234, 250, 0.5), rgba(255, 255, 255, 0.92));
+}
+
 .focus-card--lavender {
   border-color: rgba(155, 142, 196, 0.28);
   background: linear-gradient(145deg, rgba(223, 215, 244, 0.28), rgba(255, 255, 255, 0.9));
+}
+
+.focus-card--blue::before,
+.support-card--blue::before {
+  background: var(--blue);
 }
 
 .focus-card--lavender::before,
@@ -456,6 +495,10 @@ h1 {
   background: linear-gradient(145deg, rgba(194, 232, 223, 0.4), rgba(255, 255, 255, 0.94));
 }
 
+.support-card--blue {
+  background: linear-gradient(145deg, rgba(216, 234, 250, 0.55), rgba(255, 255, 255, 0.94));
+}
+
 .support-card--lavender {
   background: linear-gradient(145deg, rgba(223, 215, 244, 0.34), rgba(255, 255, 255, 0.94));
 }
@@ -479,6 +522,14 @@ h1 {
 
 .service-panel--mint {
   background: linear-gradient(145deg, rgba(194, 232, 223, 0.32), rgba(255, 255, 255, 0.94));
+}
+
+.service-panel--blue {
+  background: linear-gradient(145deg, rgba(216, 234, 250, 0.5), rgba(255, 255, 255, 0.94));
+}
+
+.service-panel--blue-soft {
+  background: linear-gradient(145deg, rgba(216, 234, 250, 0.34), rgba(255, 255, 255, 0.96));
 }
 
 .service-panel--lavender {
@@ -555,6 +606,10 @@ h1 {
 
 .feature-list--mint li::before {
   color: var(--mint);
+}
+
+.feature-list--blue li::before {
+  color: var(--blue);
 }
 
 .feature-list--lavender li::before {
@@ -656,6 +711,18 @@ h1 {
   transform: translateY(-2px);
 }
 
+.btn-blue {
+  background: var(--blue);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn-blue:hover,
+.btn-blue:focus-visible {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
 .btn-lavender {
   background: var(--lavender);
   color: #fff;
@@ -677,6 +744,18 @@ h1 {
 .btn-outline-mint:hover,
 .btn-outline-mint:focus-visible {
   background: rgba(107, 189, 170, 0.12);
+  transform: translateY(-2px);
+}
+
+.btn-outline-blue {
+  background: transparent;
+  color: var(--blue-dark);
+  border-color: var(--blue);
+}
+
+.btn-outline-blue:hover,
+.btn-outline-blue:focus-visible {
+  background: rgba(91, 143, 202, 0.12);
   transform: translateY(-2px);
 }
 
